@@ -3,7 +3,7 @@ import 'package:test_automation_demo/src/user_repo.dart';
 
 class FakeUserRepo implements UserRepo {
   @override
-  Future<String> fetchUserName() async => 'Thiha';
+  Future<String> fetchUserName() async => 'Hello, Thiha!';
 }
 
 void main() {

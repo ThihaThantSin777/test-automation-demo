@@ -14,7 +14,8 @@ void main() {
   });
 
   test('greeting() uses repo name', () async {
-    when(() => repo.fetchUserName()).thenAnswer((_) async => 'Thiha');
+    when(() => repo.fetchUserName())
+        .thenAnswer((_) => Future.value('Thiha')); // explicit Future<String>
 
     final text = await service.greeting();
     expect(text, 'Hello, Thiha!');

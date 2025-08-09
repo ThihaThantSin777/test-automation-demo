@@ -6,5 +6,8 @@ class UserService {
   final UserRepo repo;
   UserService(this.repo);
 
-  Future<String> greeting() async => 'Hello, \${await repo.fetchUserName()}!';
+  Future<String> greeting() async {
+    final name = await repo.fetchUserName();
+    return name;
+  }
 }
